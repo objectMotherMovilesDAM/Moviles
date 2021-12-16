@@ -1,3 +1,5 @@
+package ObjectMother;
+
 public class Ram extends Componente{
 
     private int memoria;

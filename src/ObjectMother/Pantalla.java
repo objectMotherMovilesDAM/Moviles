@@ -1,3 +1,5 @@
+package ObjectMother;
+
 public class Pantalla extends Componente{
 
     private float pulgadas;

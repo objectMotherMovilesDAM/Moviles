@@ -1,3 +1,5 @@
+package ObjectMother;
+
 public class Movil {
     private Bateria bateria;
     private Pantalla pantalla;
