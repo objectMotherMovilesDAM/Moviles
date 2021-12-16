@@ -1,3 +1,5 @@
+package ObjectMother;
+
 public abstract class Componente {
     private float precio;
 

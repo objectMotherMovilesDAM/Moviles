@@ -1,3 +1,5 @@
+package ObjectMother;
+
 public class Procesador extends Componente {
     private int nucleos;
     private float frecuencia;

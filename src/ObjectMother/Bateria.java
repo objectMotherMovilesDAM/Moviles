@@ -1,3 +1,5 @@
+package ObjectMother;
+
 public class Bateria extends Componente{
 
     private int capacidad;
