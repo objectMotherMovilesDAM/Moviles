@@ -8,9 +8,18 @@ public class Pantalla extends Componente{
         this.pulgadas = pulgadas;
         this.setPrecio(this.calcularPrecio());
     }
-
+    
     @Override
     public float calcularPrecio() {
-        return 0;
+        return pulgadas*6;
     }
+
+	public float getPulgadas() {
+		return pulgadas;
+	}
+
+	public float setPulgadas(float pulgadas) {
+		return this.pulgadas = pulgadas;
+	}
+    
 }
