@@ -11,6 +11,7 @@ public class Bateria extends Componente{
 
     @Override
     public float calcularPrecio() {
+    	
         return 0;
     }
 }
