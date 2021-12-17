@@ -11,11 +11,13 @@ public class Procesador extends Componente {
         this.frecuencia = frecuencia;
         this.modelo = modelo;
         this.setPrecio(this.calcularPrecio());
+        
     }
 
     @Override
     public float calcularPrecio() {
-        return 0;
+    	float frecuanciaNucleo= frecuencia/nucleos+5;
+        return frecuanciaNucleo;
     }
 
     public int getNucleos() {
