@@ -22,8 +22,4 @@ public class RandomNombre {
         }
         return palabra;
     }
-
-    public static void main(String[] args) {
-        System.out.println(RandomNombre.crearPalabra(10));
-    }
 }

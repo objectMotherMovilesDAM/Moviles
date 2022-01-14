@@ -21,5 +21,11 @@ public class Pantalla extends Componente{
 	public float setPulgadas(float pulgadas) {
 		return this.pulgadas = pulgadas;
 	}
-    
+
+    @Override
+    public String toString() {
+        return "Pantalla{" +
+                "pulgadas=" + pulgadas +
+                '}';
+    }
 }
