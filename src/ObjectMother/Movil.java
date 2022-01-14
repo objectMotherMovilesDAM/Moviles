@@ -1,6 +1,9 @@
 package ObjectMother;
 
+import java.util.Objects;
+
 public class Movil {
+    private String marca;
     private Bateria bateria;
     private Pantalla pantalla;
     private Ram ram;
@@ -8,12 +11,14 @@ public class Movil {
     private long antutu;
     private float precio;
 
-    public Movil(Bateria bateria, Pantalla pantalla, Ram ram, Procesador procesador) {
+    public Movil(Bateria bateria, Pantalla pantalla, Ram ram, Procesador procesador,String marca) {
         this.bateria = bateria;
         this.pantalla = pantalla;
         this.ram = ram;
         this.procesador = procesador;
         this.precioTotal();
+        this.calcularAntutu();
+        this.marca = marca;
     }
 
     public void precioTotal(){
@@ -21,7 +26,33 @@ public class Movil {
     }
 
     public void calcularAntutu(){
+        this.antutu = (long) (procesador.getNucleos()*(procesador.getFrecuencia()+ram.getMemoria())*4);
+    }
 
+    @Override
+    public String toString() {
+        return "Movil{" +
+                "marca="+marca+
+                ", bateria=" + bateria.toString() +
+                ", pantalla=" + pantalla.toString() +
+                ", ram=" + ram.toString() +
+                ", procesador=" + procesador.toString() +
+                ", antutu=" + antutu +
+                ", precio=" + precio +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Movil)) return false;
+        Movil movil = (Movil) o;
+        return getMarca().equals(movil.getMarca());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getBateria(), getPantalla(), getRam(), getProcesador(), getAntutu(), getPrecio());
     }
 
     public Bateria getBateria() {
@@ -70,6 +101,10 @@ public class Movil {
 
     public void setPrecio(float precio) {
         this.precio = precio;
+    }
+
+    public String getMarca() {
+        return marca;
     }
 }
 

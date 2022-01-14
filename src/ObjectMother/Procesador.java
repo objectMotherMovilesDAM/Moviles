@@ -3,20 +3,17 @@ package ObjectMother;
 public class Procesador extends Componente {
     private int nucleos;
     private float frecuencia;
-    private String modelo;
 
-    public Procesador(int nucleos, float frecuencia, String modelo) {
+    public Procesador(int nucleos, float frecuencia) {
         super();
         this.nucleos = nucleos;
         this.frecuencia = frecuencia;
-        this.modelo = modelo;
         this.setPrecio(this.calcularPrecio());
-        
     }
 
     @Override
     public float calcularPrecio() {
-    	float frecuanciaNucleo= frecuencia/nucleos+5;
+    	float frecuanciaNucleo= frecuencia/100*(nucleos+2);
         return frecuanciaNucleo;
     }
 
@@ -36,11 +33,11 @@ public class Procesador extends Componente {
         this.frecuencia = frecuencia;
     }
 
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    @Override
+    public String toString() {
+        return "Procesador{" +
+                "nucleos=" + nucleos +
+                ", frecuencia=" + frecuencia +
+                '}';
     }
 }
