@@ -21,7 +21,7 @@ public class ObjectMother {
         Ram ram = new Ram(calcularRam(procesador));
         Pantalla pantalla = new Pantalla(calcularPantalla(procesador));
         Bateria bateria = calcularBateria(pantalla);
-        return new Movil(bateria,pantalla,ram,procesador,RandomNombre.crearPalabra(1));
+        return new Movil(bateria,pantalla,ram,procesador,RandomNombre.crearPalabra(6));
     }
 
     private int calcularRam(Procesador procesador) {
